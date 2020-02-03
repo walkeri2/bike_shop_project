@@ -1,0 +1,30 @@
+<form method="post" action="/bikeshop/inventory">
+
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" />
+
+  <label for="bike-type">Select A Type:</label>
+  <select id="type-select" name="type">
+    <option value="road">Road</option>
+    <option value="mountain">Mountain</option>
+    <option value="gravel">Gravel</option>
+  </select>
+
+  <label for="bike-manufacturer">Select A Manufacturer:</label>
+  <select id="manufacturer-select" name="manufacturer">
+    <option value="surly">Surly</option>
+    <option value="bmc">BMC</option>
+    <option value="moots">Moots</option>
+    <option value="comotion">CoMotion</option>
+  </select>
+
+  <label for="cost">Cost:</label>
+      <input id="cost" type="number" name="cost" />
+
+
+  <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" name="quantity" />
+
+    <input type="submit"  value="Add Bike">
+
+</form>

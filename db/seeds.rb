@@ -1,6 +1,9 @@
 require_relative('../models/bike')
 require_relative('../models/manufacturer')
+require('pry')
 
+Bike.delete_all()
+Manufacturer.delete_all()
 
 manufacturer1 = Manufacturer.new({'name' => 'Surly'})
 manufacturer2 = Manufacturer.new({'name' => 'CoMotion'})

@@ -1,10 +1,17 @@
 <h1>Gravel Bikes</h1>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
-</html>
+<div>
+
+  <% for bike in @bikes %>
+
+
+
+  <p>Name: <%= bike.name %> </p>
+  <p>Type: <%= bike.type %> </p>
+  <p>Manufacturer: <%= bike.manufacturer.name %></p>
+  <p>Cost: <%= bike.cost %> </p>
+  <p>Quantity: <%= bike.quantity %> </p>
+
+  <% end %>
+
+</div>

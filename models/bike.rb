@@ -35,6 +35,11 @@ class Bike
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM bikes"
+    SqlRunner.run(sql)
+  end 
+
   def self.all()
     sql = "SELECT * FROM bikes"
     bike_data = SqlRunner.run(sql)
@@ -52,11 +57,19 @@ class Bike
     result = SqlRunner.run(sql, values).first
     bike = Bike.new(result)
     return bike
-  end 
+  end
 
   def manufacturer()
-    manufacturer = Manufacturer.find(@manufacturer_id)
+    manufacturer = Manufacturer.find_by_id(@manufacturer_id)
     return manufacturer
+  end
+
+  def self.get_by_category(type)
+    sql = "SELECT * FROM bikes WHERE type = $1"
+    values = [type]
+    result = SqlRunner.run(sql, values)
+    category = result.map{|bike| Bike.new(bike)}
+    return category
   end
 
 end
