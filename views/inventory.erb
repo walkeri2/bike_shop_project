@@ -1,6 +1,21 @@
 <h1>Inventory</h1>
 
-<div>
+<div class="filter-buttons">
+<form method="get" action="/bikeshop/inventory/bymanufacturer">
+   <select id=“bike-by-manufacturer-select" name="manufacturer_id">
+    <%for manufacturer in @manufacturer%>
+    <option value="<%=manufacturer.id%>"> <%=manufacturer.name%> </option>
+    <% end %>
+   </select>
+   <input type="submit" value="Filter by manufacturer">
+  </form>
+
+  <form method="get" action="/bikeshop/inventory">
+    <input type="submit" value="Show All Bikes">
+    </form>
+</div>
+
+<div class="bike-list">
 
   <% for bike in @bikes %>
 
@@ -10,6 +25,8 @@
   <p>Cost: <%= bike.cost %> </p>
   <p>Quantity: <%= bike.quantity %> </p>
 
+  <form action="/bikeshop/inventory/<%= bike.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<hr>
   <% end %>
 
 </div>

@@ -12,6 +12,9 @@
   <p>Cost: <%= bike.cost %> </p>
   <p>Quantity: <%= bike.quantity %> </p>
 
+  <form action="/bikeshop/inventory/<%= bike.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+<hr>
   <% end %>
 
 </div>

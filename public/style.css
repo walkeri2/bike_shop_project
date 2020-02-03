@@ -3,9 +3,15 @@ header img {
   margin-left: 25px;
 }
 
+
 body{
-  background-color: Honeydew;
   height: 125vh;
+  background-image: url('https://skoda-wlc.s3.amazonaws.com/2/2019/10/Cycling-Training-CVR-profimedia-0475554355-1024x450.jpg');
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat
+
   margin-top: 100px;
   font-family: Georgia;
   text-align: center;
@@ -17,7 +23,7 @@ h1 {
 }
 
 header {
-  background-color: Cadetblue;
+  background-color: rgba(40, 90, 80);
   position: fixed;
   top: 0;
   left: 0;
@@ -30,12 +36,70 @@ header {
 
 header * {
   display: inline;
-  margin: 10px;
+  margin: 15px;
 }
 
 header li a {
+
+  border: 3px double grey;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 12px 14px 12px 14px;
   color: black;
   font-family: Helvetica;
   font-weight: bold;
   text-decoration: none;
+}
+
+.bike-list{
+  box-sizing: border-box;
+  align-items: center;
+  width: 50%;
+  border: 5px solid black;
+  margin: 0 auto;
+  border-radius: 15px;
+  background: rgba(76, 90, 80, 0.7);
+}
+
+.filter-buttons {
+  box-sizing: border-box;
+  align-items: center;
+  width: 50%;
+  border: 5px solid black;
+  margin: 15 auto;
+  border-radius: 15px;
+  padding: 16px 20px 10px 20px;
+  background: rgba(76, 90, 80, 0.7);
+}
+
+.form-wrapper{
+  box-sizing: border-box;
+  align-items: center;
+  width: 50%;
+  border: 5px solid black;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  background: rgba(76, 90, 80, 0.7);
+}
+
+.form-el {
+
+  margin: 10px 0;
+
+}
+
+
+
+.form-wrapper .form-el label {
+
+  text-align: left;
+  display: inline-block;
+  width: 160px;
+  margin: 0 1em 0 0;
+}
+
+.add-button {
+  margin-top: 25px;
+  align-items: center;
 }
