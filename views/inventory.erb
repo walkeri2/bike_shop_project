@@ -1,23 +1,20 @@
 <h1>Inventory</h1>
 
 <div class="filter-buttons">
-<form method="get" action="/bikeshop/inventory/bymanufacturer">
-   <select id=“bike-by-manufacturer-select" name="manufacturer_id">
-    <%for manufacturer in @manufacturer%>
-    <option value="<%=manufacturer.id%>"> <%=manufacturer.name%> </option>
-    <% end %>
-   </select>
-   <input type="submit" value="Filter by Manufacturer">
+  <form method="get" action="/bikeshop/inventory/bymanufacturer">
+    <select id=“bike-by-manufacturer-select" name="manufacturer_id">
+      <%for manufacturer in @manufacturer%>
+        <option value="<%=manufacturer.id%>"> <%=manufacturer.name%> </option>
+      <% end %>
+    </select>
+    <input type="submit" value="Filter by Manufacturer">
   </form>
 
   <form method="get" action="/bikeshop/inventory/bytype">
      <select id=“bike-by-type-select" name="type">
-
-
-      <option value="road">Road</option>
-      <option value="mountain">Mountain</option>
-      <option value="gravel">Gravel</option>
-
+       <option value="Road">Road</option>
+       <option value="Mountain">Mountain</option>
+       <option value="Gravel">Gravel</option>
      </select>
      <input type="submit" value="Filter by Type">
   </form>

@@ -23,7 +23,7 @@ h1 {
 }
 
 header {
-  background-color: rgba(60, 105, 99, 0.99);
+  background-color: rgba(60, 90, 90, 0.99);
   position: fixed;
   top: 0;
   left: 0;
@@ -52,6 +52,7 @@ header li a {
 }
 
 .bike-list{
+  font-size: 19px;
   box-sizing: border-box;
   align-items: center;
   width: 50%;
@@ -114,10 +115,10 @@ header li a {
 }
 
 .manufacturers{
-  font-size: 30px;
+  font-size: 32px;
   box-sizing: border-box;
   align-items: center;
-  width: 30%;
+  width: 40%;
   border: 5px solid black;
   margin: 0 auto;
   border-radius: 15px;
