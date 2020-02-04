@@ -23,7 +23,7 @@ h1 {
 }
 
 header {
-  background-color: rgba(40, 90, 80);
+  background-color: rgba(60, 105, 99, 0.99);
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@ header li a {
   border: 5px solid black;
   margin: 0 auto;
   border-radius: 15px;
-  background: rgba(76, 90, 80, 0.7);
+  background: rgba(76, 90, 80, 0.8);
 }
 
 .filter-buttons {
@@ -69,7 +69,7 @@ header li a {
   margin: 15 auto;
   border-radius: 15px;
   padding: 16px 20px 10px 20px;
-  background: rgba(76, 90, 80, 0.7);
+  background: rgba(76, 90, 80, 0.8);
 }
 
 .form-wrapper{
@@ -80,13 +80,13 @@ header li a {
   margin: 0 auto;
   border-radius: 15px;
   padding: 20px 20px 20px 20px;
-  background: rgba(76, 90, 80, 0.7);
+  background: rgba(76, 90, 80, 0.8);
 }
 
 .form-el {
 
   margin: 10px 0;
-
+  display: flex;
 }
 
 
@@ -102,4 +102,37 @@ header li a {
 .add-button {
   margin-top: 25px;
   align-items: center;
+}
+
+.change-buttons{
+  display: inline-flex;
+  margin: 5px 5px 5px 5px;
+}
+
+.edit-button{
+  margin-right: 10px;
+}
+
+.manufacturers{
+  font-size: 30px;
+  box-sizing: border-box;
+  align-items: center;
+  width: 30%;
+  border: 5px solid black;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  background: rgba(76, 90, 80, 0.8);
+}
+
+.add-manuf{
+  font-size: 30px;
+  box-sizing: border-box;
+  align-items: center;
+  width: 30%;
+  border: 5px solid black;
+  margin: 15 auto;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  background: rgba(76, 90, 80, 0.8);
 }

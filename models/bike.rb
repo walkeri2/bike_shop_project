@@ -25,7 +25,7 @@ class Bike
 
   def update()
     sql = "UPDATE bikes SET(name, type, manufacturer_id, cost, quantity) = ($1, $2, $3, $4, $5) WHERE id = $6"
-    values = [@name, @type, @manufacturer_id, @cost, @quantity]
+    values = [@name, @type, @manufacturer_id, @cost, @quantity, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -56,6 +56,14 @@ class Bike
     values = [id]
     result = SqlRunner.run(sql, values).first
     bike = Bike.new(result)
+    return bike
+  end
+
+  def self.find_by_type(type)
+    sql = "SELECT * FROM bikes WHERE type = $1"
+    values = [type]
+    result = SqlRunner.run(sql, values)
+    bike = Bike.map_items(result)
     return bike
   end
 

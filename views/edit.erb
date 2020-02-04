@@ -1,0 +1,55 @@
+<h1>Edit Bike</h1>
+
+<form method="post" action="/bikeshop/inventory/<%= @bike.id %>">
+
+<div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Name:</label>
+      <input id="name"
+            type="text"
+            name="name"
+            value ="<%= @bike.name %>" />
+    </div>
+
+    <div class="form-el">
+      <label for="bike-type">Type:</label>
+      <select id="type-select" name="type">
+        <option value="Road" <%= "selected" if @bike.type == "Road" %> >Road</option>
+        <option value="Mountain"<%= "selected" if @bike.type == "Mountain" %> >Mountain</option>
+        <option value="Gravel"<%= "selected" if @bike.type == "Gravel" %> >Gravel</option>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="bike-manufacturer">Manufacturer:</label>
+        <select id="manufacturer-select"                 name="manufacturer_id">
+            <% @manufacturer.each do |manufacturer| %>
+            <option <%= "selected" if @bike.manufacturer.name == manufacturer.name %>
+          value=<%= manufacturer.id %>><%= manufacturer.name %>
+          </option>
+          <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="cost">Cost:</label>
+        <input id="cost"
+              type="number"
+              name="cost"
+              value ="<%= @bike.cost %>" />
+    </div>
+
+    <div class="form-el">
+      <label for="quantity">Quantity:</label>
+      <input id="quantity"
+              type="number"
+              name="quantity"
+              value ="<%= @bike.quantity %>" />
+    </div>
+
+    <div class="add-button">
+      <input type="submit"  value="Edit Bike">
+    </div>
+  </div>
+</form>

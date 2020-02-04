@@ -7,12 +7,28 @@
     <option value="<%=manufacturer.id%>"> <%=manufacturer.name%> </option>
     <% end %>
    </select>
-   <input type="submit" value="Filter by manufacturer">
+   <input type="submit" value="Filter by Manufacturer">
+  </form>
+
+  <form method="get" action="/bikeshop/inventory/bytype">
+     <select id=“bike-by-type-select" name="type">
+
+
+      <option value="road">Road</option>
+      <option value="mountain">Mountain</option>
+      <option value="gravel">Gravel</option>
+
+     </select>
+     <input type="submit" value="Filter by Type">
   </form>
 
   <form method="get" action="/bikeshop/inventory">
     <input type="submit" value="Show All Bikes">
     </form>
+
+    <form method="get" action="/bikeshop/inventory/new">
+      <input type="submit" value="Add Bike">
+      </form>
 </div>
 
 <div class="bike-list">
@@ -23,9 +39,21 @@
   <p>Type: <%= bike.type %> </p>
   <p>Manufacturer: <%= bike.manufacturer.name %></p>
   <p>Cost: <%= bike.cost %> </p>
+  <% if bike.quantity <= 2 %>
+  <p style= 'background-color: rgb(220, 73, 73, 0.7)'>Quantity:<%= bike.quantity %> </p>
+  <% else %>
   <p>Quantity: <%= bike.quantity %> </p>
+  <% end %>
+  <div class="change-buttons">
 
-  <form action="/bikeshop/inventory/<%= bike.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+    <div class="edit-button">
+
+    <form action="/bikeshop/inventory/<%= bike.id %>/edit" method="GET"><input type="submit" value="Edit"></form>
+
+    </div>
+
+    <form action="/bikeshop/inventory/<%= bike.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+  </div>
 <hr>
   <% end %>
 

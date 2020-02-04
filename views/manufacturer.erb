@@ -1,11 +1,17 @@
 <h1>Manufacturers</h1>
 
-<div>
+<div class="manufacturers">
 
   <% for manufacturer in @manufacturer %>
 
     <p> <%= manufacturer.name %> </p>
 
-    <% end %>
+    <form action="/bikeshop/manufacturer/<%= manufacturer.id %>/delete" method="POST"><input type="submit" value="Delete Manufacturer"></form>
 
+
+
+    <% end %>
 </div>
+    <div class="add-manuf">
+      <form action="/bikeshop/manufacturer/new" method="GET"><input type="submit" value="Add Manufacturer"></form>
+    </div>
