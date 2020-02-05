@@ -78,18 +78,3 @@ get '/bikeshop/manufacturer' do
   @manufacturer = Manufacturer.all
   erb(:manufacturer)
 end
-
-  # get '/bikeshop/mountain' do
-  #   @bikes = Bike.get_by_category("Mountain")
-  #   erb(:mountain)
-  # end
-  #
-  # get '/bikeshop/road' do
-  #   @bikes = Bike.get_by_category("Road")
-  #   erb(:road)
-  # end
-  #
-  # get '/bikeshop/gravel' do
-  #   @bikes = Bike.get_by_category("Gravel")
-  #   erb(:gravel)
-  # end
